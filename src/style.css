@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+table.scores {
+  border: 2px solid black;
+  width: 100%;
+}
+
 input.form-field {
   margin: 5px 0 5px 0;
 }
