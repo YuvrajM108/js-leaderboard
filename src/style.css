@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-content,
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input.form-field {
+  margin: 5px 0 5px 0;
+}
+
+button.refresh-btn {
+  height: 30px;
+  margin-left: 5px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
