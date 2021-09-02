@@ -26,8 +26,16 @@ To get a local copy up and running follow these simple example steps:
 You can download the code to your personal computer by cloning the repository using the following command:
 
 ```
-git clone
+git clone https://github.com/YuvrajM108/js-leaderboard.git
 ```
+
+Once the project has been downloaded, you can set it up by navigating to the project directory, starting your terminal, and entering the following commands:
+
+```
+npm install
+npm run dev
+```
+
 ### Usage
 
 In order to run this project, enter the following command in your terminal:
