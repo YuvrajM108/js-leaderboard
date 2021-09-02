@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+</head>
+<body>
+  <h1>Leaderboard</h1>
+  <div class="content">
+    <div class="left-content">
+      <div class="table-header">
+        <h3 class="scores-header">Recent scores</h3>
+        <button class="refresh-btn" id="refresh" type="button">Refresh</button>
+      </div>
+      <table class="scores">
+        <tbody>
+        <tr><td><h4>John:</h4></td><td><h4>100</h4></td><tr>
+        <tr><td><h4>Mark:</h4></td><td><h4>80</h4></td><tr>
+        <tr><td><h4>Yuvraj:</h4></td><td><h4>20</h4></td><tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="right-content">
+      <h3>Add your score</h3>
+      <form class="score-form" id="score-form">
+        <input class="form-field" name="name" id="name" placeholder="Your name">
+        <br>
+        <input class="form-field" name="score" id="score" placeholder="Your score">
+        <br>
+        <div class="submit-btn">
+          <button type="submit" class="add-score-btn">Submit</button>
+        </div> 
+      </form>
+    </div>
+  </div>
+</body>
+</html>
