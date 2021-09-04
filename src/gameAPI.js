@@ -3,17 +3,21 @@ import myScoreBoard from './scoreBoard';
 const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
 const scoresBoard = async () => {
-  fetch(requestURL, {
-    mode: 'cors',
-    method: 'POST',
-    body: JSON.stringify({
-      name: 'Cricket',
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((response) => response.json());
+  try {
+    await fetch(requestURL, {
+      mode: 'cors',
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'Cricket',
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json());
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
 };
 
 const gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0SnEe00QRycoJQ0WLR02/scores/';
