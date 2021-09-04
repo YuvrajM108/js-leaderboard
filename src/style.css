@@ -24,6 +24,7 @@ table.scores {
 
 input.form-field {
   margin: 5px 0 5px 0;
+  width: 100%;
 }
 
 button.refresh-btn {
@@ -34,4 +35,12 @@ button.refresh-btn {
 .submit-btn {
   display: flex;
   justify-content: flex-end;
+}
+
+h2.processing {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
