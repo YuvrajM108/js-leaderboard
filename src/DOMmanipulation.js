@@ -6,16 +6,14 @@ const displayScores = () => {
   const scoreList = scoreTable.firstChild;
   scoreList.innerHTML = '';
   const allScores = myScoreBoard.records;
-  allScores.forEach((record) => {
+  for (let i = 0; i < allScores.length; i += 1) {
     const row = document.createElement('tr');
-    const nameCell = document.createElement('td');
-    const scoreCell = document.createElement('td');
-    nameCell.innerHTML = `<h4>${record.user}</h4>`;
-    scoreCell.innerHTML = `<h4>${record.score}</h4>`;
-    row.appendChild(nameCell);
-    row.appendChild(scoreCell);
+    row.innerHTML = `<td>${allScores[i].user}:</td><td>${allScores[i].score}</td>`;
+    if (i % 2 === 1) {
+      row.classList.add('even');
+    }
     scoreList.appendChild(row);
-  });
+  }
 };
 
 const addFormSubmission = () => {
