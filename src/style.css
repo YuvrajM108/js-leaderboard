@@ -1,6 +1,7 @@
 .content {
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
 }
 
 .left-content,
@@ -19,7 +20,7 @@
 }
 
 table.scores {
-  border: 2px solid black;
+  border: 3px solid black;
   border-collapse: collapse;
   width: 80%;
 }
@@ -31,7 +32,10 @@ td {
 
 input.form-field {
   margin: 5px 0 5px 0;
+  height: 25px;
   width: 100%;
+  font-size: 16px;
+  border: 2px solid black;
 }
 
 button {
@@ -48,6 +52,7 @@ button:hover {
   box-shadow: none;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 button.refresh-btn {
@@ -77,4 +82,8 @@ h2.processing {
 
 tr.even {
   background-color: lightgray;
+}
+
+h1, h3, tr, button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
