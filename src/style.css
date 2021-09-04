@@ -4,6 +4,13 @@
   align-items: baseline;
 }
 
+h1,
+h3,
+tr,
+button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .left-content,
 .right-content {
   width: 50%;
@@ -82,8 +89,4 @@ h2.processing {
 
 tr.even {
   background-color: lightgray;
-}
-
-h1, h3, tr, button {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

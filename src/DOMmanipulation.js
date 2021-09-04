@@ -9,7 +9,7 @@ const displayScores = () => {
   for (let i = 0; i < allScores.length; i += 1) {
     const row = document.createElement('tr');
     row.innerHTML = `<td>${allScores[i].user}:</td><td>${allScores[i].score}</td>`;
-    if (i % 2 == 0) {
+    if (i % 2 === 1) {
       row.classList.add('even');
     }
     scoreList.appendChild(row);

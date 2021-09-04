@@ -5,7 +5,9 @@
 This project is a JavaScript web application that acts as a leaderboard which allows users to:
 
 - Add their name and score to the leaderboard.
-- Reset the leaderboard.
+- Refresh the leaderboard to display ant new scores.
+
+![Screenshot](images/leaderboardScreenshot.PNG)
 
 ## Built With
 
