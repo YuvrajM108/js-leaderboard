@@ -53,8 +53,8 @@ export const addGameScore = async (name, points) => {
       submitButton.disabled = false;
     });
   } catch (error) {
-      console.log('Error: ' + error);
-    }
+    console.log(`Error: ${error}`);
+  }
 };
 
 export default scoresBoard;
