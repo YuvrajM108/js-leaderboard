@@ -28,25 +28,4 @@ const addFormSubmission = () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  getGameScores()
-  .then(() => {
-    displayScores();
-  });
-});
-
-const addScoreForm = document.getElementById('score-form');
-addScoreForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  addFormSubmission();
-});
-
-const refreshBtn = document.getElementById('refresh');
-refreshBtn.addEventListener('click', () => {
-  getGameScores()
-  .then(() => {
-    displayScores();
-  });
-});
-
 export { displayScores, addFormSubmission };

@@ -35,3 +35,11 @@ button.refresh-btn {
   display: flex;
   justify-content: flex-end;
 }
+
+h2.processing {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

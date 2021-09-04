@@ -1,8 +1,11 @@
 import myScoreBoard from './scoreBoard';
-import { addFormSubmission } from './DOMmanipulation';
+import { addFormSubmission, displayScores } from "./DOMmanipulation";
 import './style.css';
 
-const gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DcQXhgrrBfecZM5hD6Av/scores/';
+const gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0SnEe00QRycoJQ0WLR02/scores/';
+const processingMessage = document.getElementById('processing');
+const refreshButton = document.getElementById('refresh');
+const submitButton = document.getElementById('submit-score');
 
 export const getGameScores = async () => {
     try {
@@ -19,6 +22,9 @@ export const getGameScores = async () => {
 
 export const addGameScore = async (name, points) => {
   try {
+    processingMessage.classList.remove('hidden')
+    refreshButton.disabled = true;
+    submitButton.disabled = true;
     await fetch(gameURL, {
       mode: 'cors',
       method: 'POST',
@@ -26,8 +32,32 @@ export const addGameScore = async (name, points) => {
       body: JSON.stringify({"user": name, "score": points }),
     }).then((response) => {
       console.log(response.json());
+    }).then(() => {
+      processingMessage.classList.add('hidden');
+      refreshButton.disabled = false;
+      submitButton.disabled = false;
     });
   } catch(error) {
     console.log(error);
   }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  getGameScores()
+  .then(() => {
+    displayScores();
+  });
+});
+  
+const addScoreBtn = document.getElementById('submit-score');
+addScoreBtn.addEventListener('click', () => {
+  addFormSubmission();
+});
+  
+const refreshBtn = document.getElementById('refresh');
+refreshBtn.addEventListener('click', () => {
+  getGameScores()
+  .then(() => {
+    displayScores();
+  });
+});
