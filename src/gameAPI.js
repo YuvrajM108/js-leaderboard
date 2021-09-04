@@ -44,7 +44,7 @@ export const addGameScore = async (name, points) => {
       mode: 'cors',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 'user': name, 'score': points }),
+      body: JSON.stringify({ user: name, score: points }),
     }).then((response) => {
       response.json();
     }).then(() => {
@@ -52,7 +52,9 @@ export const addGameScore = async (name, points) => {
       refreshButton.disabled = false;
       submitButton.disabled = false;
     });
-  } catch (error) {}
+  } catch (error) {
+      console.log('Error: ' + error);
+    }
 };
 
 export default scoresBoard;
