@@ -12,20 +12,18 @@
         <h3 class="scores-header">Recent scores</h3>
         <button class="refresh-btn" id="refresh" type="button">Refresh</button>
       </div>
-      <table class="scores">
+      <table class="scores" id="scoresTable">
         <tbody>
-        <tr><td><h4>John:</h4></td><td><h4>100</h4></td><tr>
-        <tr><td><h4>Mark:</h4></td><td><h4>80</h4></td><tr>
-        <tr><td><h4>Yuvraj:</h4></td><td><h4>20</h4></td><tr>
+          
         </tbody>
       </table>
     </div>
     <div class="right-content">
       <h3>Add your score</h3>
       <form class="score-form" id="score-form">
-        <input class="form-field" name="name" id="name" placeholder="Your name">
+        <input class="form-field" name="name" id="name" placeholder="Your name" required>
         <br>
-        <input class="form-field" name="score" id="score" placeholder="Your score">
+        <input class="form-field" name="score" id="score" placeholder="Your score" required>
         <br>
         <div class="submit-btn">
           <button type="submit" class="add-score-btn">Submit</button>
