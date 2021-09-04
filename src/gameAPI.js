@@ -37,24 +37,22 @@ export const getGameScores = async () => {
 
 export const addGameScore = async (name, points) => {
   try {
-    processingMessage.classList.remove('hidden')
+    processingMessage.classList.remove('hidden');
     refreshButton.disabled = true;
     submitButton.disabled = true;
     await fetch(gameURL, {
       mode: 'cors',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({'user': name, 'score': points }),
+      body: JSON.stringify({ 'user': name, 'score': points }),
     }).then((response) => {
       response.json();
     }).then(() => {
-    processingMessage.classList.add('hidden');
-    refreshButton.disabled = false;
-    submitButton.disabled = false;
-  });
-} catch (error) {
-  
-}
+      processingMessage.classList.add('hidden');
+      refreshButton.disabled = false;
+      submitButton.disabled = false;
+    });
+  } catch (error) {}
 };
 
 export default scoresBoard;
