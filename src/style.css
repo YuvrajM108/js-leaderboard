@@ -24,6 +24,7 @@ table.scores {
 
 input.form-field {
   margin: 5px 0 5px 0;
+  width: 100%;
 }
 
 button.refresh-btn {

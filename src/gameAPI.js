@@ -2,7 +2,7 @@ import myScoreBoard from './scoreBoard';
 
 const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
-const scoresBoard = () => {
+const scoresBoard = async () => {
   fetch(requestURL, {
     mode: 'cors',
     method: 'POST',
