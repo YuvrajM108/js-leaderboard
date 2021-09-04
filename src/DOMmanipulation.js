@@ -11,20 +11,20 @@ const displayScores = () => {
     const nameCell = document.createElement('td');
     const scoreCell = document.createElement('td');
     nameCell.innerHTML = `<h4>${record.user}</h4>`;
-    scoreCell.innerHTML = `<h4>${record.score}</h4>`
+    scoreCell.innerHTML = `<h4>${record.score}</h4>`;
     row.appendChild(nameCell);
     row.appendChild(scoreCell);
     scoreList.appendChild(row);
   });
-}
+};
 
 const addFormSubmission = () => {
   const nameVal = document.getElementById('name').value;
   const scoreVal = document.getElementById('score').value;
-  if(nameVal && scoreVal) {
+  if (nameVal && scoreVal) {
     addGameScore(nameVal, scoreVal)
-    .then(() => getGameScores())
-    .then(() => displayScores());
+      .then(() => getGameScores())
+      .then(() => displayScores());
   }
 };
 
