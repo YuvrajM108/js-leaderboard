@@ -1,4 +1,4 @@
-import { addGameScore, getGameScores } from '.';
+import { addGameScore, getGameScores } from './gameAPI';
 import myScoreBoard from './scoreBoard';
 
 const displayScores = () => {
